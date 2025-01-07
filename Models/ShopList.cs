@@ -1,4 +1,5 @@
 ﻿using SQLite;
+using SQLiteNetExtensions.Attributes;
 
 namespace FrisanIonutLab7.Models
 {
@@ -11,5 +12,8 @@ namespace FrisanIonutLab7.Models
         public string Description { get; set; }
 
         public DateTime Date {  get; set; }
+
+        [ForeignKey(typeof(Shop))]
+        public int ShopID { get; set; }
     }
 }
