@@ -40,7 +40,6 @@ public partial class ListPage : ContentPage
                 listView.ItemsSource = await App.Database.GetListProductsAsync(slist.ID);
             }
         }
-        Debug.WriteLine("*****");
     }
 
     async void OnDeleteButtonClicked(object sender, EventArgs e)
